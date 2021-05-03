@@ -10,7 +10,7 @@
   class="form-control"
   [(ngModel)]="serverName">
 
-<p>{{ serverName }}</p>
+<!--<p>{{ serverName }}</p>-->
 
 <button
   class="btn btn-primary"
@@ -18,6 +18,20 @@
   (click)="onCreateServer()">Add Server</button>
 
 <p>{{ serverCreationStatus }}</p>
+
+<!--Assignment 2: Practicing Databinding -->
+<label>Username</label>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName">
+
+<p>{{userName}}</p>
+
+<button
+  class="btn btn-primary"
+  [disabled]="(userName === '')"
+  (click)="onReset()">Reset User</button>
 
 <app-server></app-server>
 <app-server></app-server>
